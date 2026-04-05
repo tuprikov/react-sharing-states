@@ -1,10 +1,4 @@
-interface User {
-    user: {
-        id: number
-        name: string
-        role: string
-    }
-}
+import { User } from '../types/user'
 
 const Navigation = ({ user }: User) => {
     return (

@@ -1,19 +1,11 @@
-interface User {
-    user: {
-        id: number
-        name: string
-        role: string
-    }
-
-    onUpdateName: (name: string) => void
-}
+import { User } from '../types/user'
 
 const ProfilePage = ({ user, onUpdateName }: User) => {
     return (
         <>
             <h1>Profile Page</h1>
             <span>{user.name}</span>
-            <button onClick={onUpdateName}>Update name</button>
+            <button onClick={() => onUpdateName(user.name)}>Update name</button>
         </>
     )
 }
